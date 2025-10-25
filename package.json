@@ -17,10 +17,10 @@
     "pg": "^8.16.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "zod": "^4.1.12",
     "zvijude": "^0.5.12"
   },
   "devDependencies": {
-    "ts-node": "^10.9.2",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
@@ -31,6 +31,7 @@
     "eslint-config-next": "15.5.6",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }

@@ -4,13 +4,15 @@ import { Btn } from "zvijude/btns";
 import { Checkbox } from "zvijude/form";
 import { deleteTask, toggleCompleted } from "@/actions";
 
-interface Todo {
+export interface Todo {
   id: number;
   text: string;
   completed: boolean;
   createdAt: string;
   completedAt?: string;
   category?: string;
+  categoryId?: number | null;
+  categoryName?: string | null;
 }
 
 export function TodoItem({ todo }: { todo: Todo }) {

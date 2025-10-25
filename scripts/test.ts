@@ -1,17 +1,22 @@
-// import { db } from './db_conn'
+import { db } from "./db_conn";
 
-// async function test() {
-//   const data = await db.schema.createTable('todos', table => {
-//     table.increments('id')
-//     table.text('text')
-//     table.boolean('completed').defaultTo(false)
-//     table.timestamp('createdAt').defaultTo(db.fn.now())
-//     table.timestamp('completedAt').defaultTo(db.fn.now())
-//   })
-//   console.log('data', data)
+async function test() {
+  const hasTodos = await db.schema.hasTable("todos");
+  if (hasTodos) {
+    const hasCategoryName = await db.schema.hasColumn("todos", "category_name");
+    if (hasCategoryName) {
+      await db.schema.alterTable("todos", (table) => {
+        table.dropColumn("category_name");
+      });
+      console.log("✅ removed category_name column from todos");
+    } else {
+      console.log("ℹ️ category_name column not found — nothing to remove");
+    }
+  } else {
+    console.log("❌ todos table not found");
+  }
 
-//   console.log('done')
-//   db.destroy()
-// }
+  await db.destroy();
+}
 
-// test()
+test();

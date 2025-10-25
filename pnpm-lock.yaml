@@ -29,6 +29,9 @@ importers:
       react-dom:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
+      zod:
+        specifier: ^4.1.12
+        version: 4.1.12
       zvijude:
         specifier: ^0.5.12
         version: 0.5.12
@@ -2412,6 +2415,9 @@ packages:
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+  zod@4.1.12:
+    resolution: {integrity: sha512-JInaHOamG8pt5+Ey8kGmdcAcg3OL9reK8ltczgHTAwNhMys/6ThXHityHxVV2p3fkw/c+MAvBHFVYHFZDmjMCQ==}
 
   zvijude@0.5.12:
     resolution: {integrity: sha512-z1GBcDUCyAl3gWay5tDWDhlpTlb8Mc0u2Z4zSSEV4xsxibS+/I1JRYyzSmE/lZcGattTXqOJDo/z3oui/mCpnw==}
@@ -5358,5 +5364,7 @@ snapshots:
   yn@3.1.1: {}
 
   yocto-queue@0.1.0: {}
+
+  zod@4.1.12: {}
 
   zvijude@0.5.12: {}
